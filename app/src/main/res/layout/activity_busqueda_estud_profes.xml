@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.angelus.sqliteestudiantesprofesores.BusquedaEstudProfes"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+                 <ListView
+                     android:id="@+id/ListViewZonaDeMuestra"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+                 </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <RadioGroup
+                    android:id="@+id/miRadioGrupoId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#BBDEFB">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Selecciona Opción"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroEstudiantes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Todos Estudiantes" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroEstudiantesXCiclo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Estudiantes por ciclo" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroEstudiantesXCurso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Estudiantes por curso" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroEstudiantesXCursoYCiclo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Estudiantes Ciclo/Curso" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroProfesores"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Todos Profesores" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroProfesoresXCiclo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profesores por ciclo" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroProfesoresXCurso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profesores por curso" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroProfesoresXCursoYCiclo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profesores Ciclo/Curso" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_muestroProfesYEstud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profesores y Estudiantes" />
+
+                </RadioGroup>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDerechaAbajo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/editTextCiclo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ciclo"
+                android:inputType="textPersonName"
+                android:visibility="invisible"/>
+            <EditText
+                android:id="@+id/editTextCurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Curso"
+                android:inputType="textPersonName"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/buttonBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Buscar"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
